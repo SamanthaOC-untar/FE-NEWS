@@ -1,12 +1,31 @@
 /* login.css */
 :root {
-  --fg:  #0A3D62;
-  --bg: #3498DB; 
-  --muted: #52B788;
-  --accent: #F8F9FA; 
-  --card: #52B788;
-  --border: #14532D;
-  --button: #3498DB;
+  /* Palet untuk tema news: merah (aksen), ink (teks gelap), paper (surface terang) */
+  --fg:  #0A0A0B;   /* ink-900: teks utama */
+  --bg:  #FFF5F5;   /* red-50: latar gradien awal (subtle blush) */
+  --muted: #FECACA; /* red-200: latar gradien akhir & hover btn (soft) */
+  --accent: #C81E1E;/* red-600: aksen/link/border input */
+  --card: #FFFFFF;  /* paper-50: kartu/form */
+  --border: #E2E6EC;/* paper-400: garis fokus/border halus */
+  --button: #C81E1E;/* red-600: tombol utama */
+
+  /* Tambahan variabel util */
+  --fg-muted: #2B2E33;         /* ink-500 */
+  --paper-50: #FFFFFF;         /* surface input */
+  --accent-hover: #991B1B;     /* red-800 */
+  --shadow-elev-1: rgba(0,0,0,0.2);
+  --focus-glow: rgba(200,30,30,0.4);
+  --white: #FFFFFF;
+
+  /* Responsive tokens */
+  --radius: 12px;
+  --pad-card: 30px 25px;
+  --fs-base: clamp(14px, 1.6vw, 16px);
+  --fs-label: clamp(12px, 1.3vw, 14px);
+  --fs-title: clamp(18px, 2.8vw, 22px);
+  --card-w-sm: 360px;   /* default target width */
+  --card-w-md: 400px;   /* ≥768px */
+  --card-w-lg: 420px;   /* ≥1024px */
 }
 
 * { box-sizing: border-box; }
@@ -15,26 +34,31 @@ html { scroll-behavior: smooth; }
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(var(--bg), var(--muted));
-    height: 100vh;
+    background: linear-gradient(var(--accent-hover), var(--fg-muted));
+    height: 100vh;                /* tinggi penuh */
+    min-height: 100dvh;           /* fix mobile viewport */
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--fg);
+    font-size: var(--fs-base);
+    padding: 16px;                /* ruang tepi aman di layar sangat kecil */
 }
 
 .login-container {
     background: var(--card);
-    padding: 30px 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    width: 320px;
+    padding: var(--pad-card);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 12px var(--shadow-elev-1);
+    width: min(92vw, var(--card-w-sm)); /* responsif: ikut lebar layar */
 }
 
 .login-container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--fg);
+    font-size: var(--fs-title);
+    line-height: 1.2;
 }
 
 .form-group {
@@ -43,44 +67,47 @@ body {
 
 .form-group label {
     display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #444;
+    font-size: var(--fs-label);
+    margin-bottom: 6px;
+    color: var(--fg-muted);
 }
 
 .form-group input {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* target sentuh nyaman */
     border: 1px solid var(--accent);
     border-radius: 8px;
-    font-size: 14px;
+    font-size: var(--fs-base);
+    background: var(--paper-50);
+    color: var(--fg);
 }
 
 .form-group input:focus {
     outline: none;
-    border-color: var(--border);
-    box-shadow: 0 0 4px rgba(74,144,226,0.6);
+    border-color: var(--accent);
+    box-shadow: 0 0 4px var(--focus-glow);
 }
 
 .btn-login {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: var(--button);
     border: none;
     border-radius: 8px;
-    color: #fff;
-    font-size: 16px;
+    color: var(--white);
+    font-size: clamp(14px, 1.7vw, 16px);
     cursor: pointer;
 }
 
 .btn-login:hover {
     background: var(--muted);
+    color: var(--accent-hover);
 }
 
 .extra-links {
     margin-top: 15px;
     text-align: center;
-    font-size: 14px;
+    font-size: var(--fs-label);
 }
 
 .extra-links a {
@@ -91,3 +118,23 @@ body {
 .extra-links a:hover {
     text-decoration: underline;
 }
+
+
+/* Responsif Mulai */
+@media (max-width: 360px) {
+  :root {
+    --radius: 10px;
+    --pad-card: 22px 18px;
+  }
+}
+
+/* Tablet: lebarkan kartu sedikit */
+@media (min-width: 768px) {
+  .login-container { width: min(88vw, var(--card-w-md)); }
+}
+
+/* Desktop: lebarkan lagi agar proporsional */
+@media (min-width: 1024px) {
+  .login-container { width: min(60vw, var(--card-w-lg)); }
+}
+/* Responsif Selesai */
