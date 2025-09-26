@@ -1,0 +1,106 @@
+/* =========================================================
+   FE-NEWS • Root Color Palette (Red • Ink • Paper)
+   Catatan:
+   - "ink" = turunan hitam untuk teks & ikon
+   - "paper" = turunan putih untuk latar/surface
+   - "red" = aksen utama untuk brand, link, badge, tombol
+   ======================================================= */
+:root {
+  /* ---------- Red (aksen untuk brand, link, tombol) ---------- */
+  --red-50:  #FFF5F5;  /* very light tint (background subtle) */
+  --red-200: #FECACA;  /* light tint (hover bg, subtle badges) */
+  --red-400: #F05252;  /* mid (chips, tags, subtle buttons) */
+  --red-600: #C81E1E;  /* primary accent (brand, primary btn) */
+  --red-800: #991B1B;  /* deep (hover/darker states, headlines accent) */
+
+  /* ---------- Ink (hitam keabu untuk teks & ikon) ---------- */
+  --ink-900: #0A0A0B;  /* primary text on light */
+  --ink-700: #1A1B1E;  /* headings, strong body */
+  --ink-500: #2B2E33;  /* secondary text */
+  --ink-300: #4A4F57;  /* muted text, meta, tanggal */
+  --ink-100: #747B86;  /* disabled, hairline icons */
+
+  /* ---------- Paper (putih keabu untuk surface) ---------- */
+  --paper-50:  #FFFFFF; /* pure paper */
+  --paper-100: #FAFBFC; /* base app bg */
+  --paper-200: #F4F6F8; /* section bg / cards */
+  --paper-300: #ECEFF3; /* dividers / borders subtle */
+  --paper-400: #E2E6EC; /* stronger borders */
+
+  /* ---------- Semantic aliases (langsung pakai) ---------- */
+  --bg: var(--paper-100);
+  --surface: var(--paper-50);
+  --surface-2: var(--paper-200);
+  --border: var(--paper-300);
+
+  --fg: var(--ink-900);
+  --fg-muted: var(--ink-500);
+  --fg-meta: var(--ink-300);
+
+  --accent: var(--red-600);
+  --accent-contrast: var(--paper-50);
+  --accent-hover: var(--red-800);
+  --accent-subtle: var(--red-50);
+
+  --link: var(--red-600);
+  --link-hover: var(--red-800);
+}
+
+/* =========================
+   Mode Gelap (opsional)
+   ======================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0C0D10;          /* hampir hitam, nyaman dibaca */
+    --surface: #121419;     /* kartu/toolbar gelap */
+    --surface-2: #171A20;   /* surface sekunder */
+    --border: #242933;      /* garis/border */
+
+    --fg: #EAECEF;          /* teks utama terang */
+    --fg-muted: #B7BDC7;    /* teks sekunder */
+    --fg-meta: #8C94A1;     /* meta/info */
+
+    /* Red tetap konsisten, hover sedikit lebih pekat */
+    --accent: var(--red-600);
+    --accent-contrast: var(--paper-50);
+    --accent-hover: #B11B1B;
+    --accent-subtle: #2A0E0E; /* subtle red bg di dark */
+  }
+}
+
+/* ============ Contoh pemakaian cepat ============ */
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover { color: var(--link-hover); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: 1px solid transparent;
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+.badge-alert {
+  background: var(--accent-subtle);
+  color: var(--accent);
+  border: 1px solid var(--red-200);
+}
+.hr {
+  height: 1px;
+  background: var(--border);
+  border: 0;
+}
