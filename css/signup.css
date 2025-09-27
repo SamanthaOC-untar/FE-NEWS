@@ -1,0 +1,138 @@
+/* login.css */
+:root {
+  --fg:  #0A0A0B;   
+  --bg:  #FFF5F5;   
+  --muted: #FECACA; 
+  --accent: #C81E1E;
+  --card: #FFFFFF;  
+  --border: #E2E6EC;
+  --button: #C81E1E;
+
+
+  --fg-muted: #2B2E33;         
+  --paper-50: #FFFFFF;         
+  --accent-hover: #991B1B;    
+  --shadow-elev-1: rgba(0,0,0,0.2);
+  --focus-glow: rgba(200,30,30,0.4);
+  --white: #FFFFFF;
+
+
+  --radius: 12px;
+  --pad-card: 30px 25px;
+  --fs-base: clamp(14px, 1.6vw, 16px);
+  --fs-label: clamp(12px, 1.3vw, 14px);
+  --fs-title: clamp(18px, 2.8vw, 22px);
+  --card-w-sm: 360px;   
+  --card-w-md: 400px;  
+  --card-w-lg: 420px;   
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(var(--accent-hover), var(--fg-muted));
+    height: 100vh;                
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--fg);
+    font-size: var(--fs-base);
+    padding: 16px;   
+}             
+
+.signup-container {
+    background: var(--card);
+    padding: var(--pad-card);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 12px var(--shadow-elev-1);
+    width: min(92vw, var(--card-w-sm)); 
+}
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--fg);
+    font-size: var(--fs-title);
+    line-height: 1.2;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: var(--fs-label);
+    margin-bottom: 6px;
+    color: var(--fg-muted);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    font-size: var(--fs-base);
+    background: var(--paper-50);
+    color: var(--fg);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 4px var(--focus-glow);
+}
+
+.btn-signup {
+    width: 100%;
+    padding: 12px;
+    background: var(--button);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    font-size: clamp(14px, 1.7vw, 16px);
+    cursor: pointer;
+}
+
+.btn-signup:hover {
+    background: var(--muted);
+    color: var(--accent-hover);
+}
+
+.extra-links {
+    margin-top: 15px;
+    text-align: center;
+    font-size: var(--fs-label);
+}
+
+.extra-links a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsif Mulai */
+@media (max-width: 360px) {
+  :root {
+    --radius: 10px;
+    --pad-card: 22px 18px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .login-container { width: min(88vw, var(--card-w-md)); }
+}
+
+
+@media (min-width: 1024px) {
+  .login-container { width: min(60vw, var(--card-w-lg)); }
+}
+/* Responsif Selesai */
