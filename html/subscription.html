@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langganan - FENEWS</title>
+    <link rel="stylesheet" href="../css/subscription.css">
+</head>
+<body>
+    <header></header>
+
+    <main class="main-content">
+        <div class="subscription-container">
+            <div class="subscription-header">
+                <h1>Berlangganan FENews Premium</h1>
+                <p>Nikmati akses penuh ke semua berita eksklusif dan fitur premium</p>
+            </div>
+
+            <div class="subscription-content">
+                <!-- Pilihan Paket -->
+                <section class="subscription-section">
+                    <h2>Pilih Paket Langganan</h2>
+                    
+                    <div class="pricing-cards">
+                        <div class="pricing-card" data-plan="monthly">
+                            <div class="pricing-header">
+                                <h3>Bulanan</h3>
+                            </div>
+                            <div class="pricing-price">
+                                <span class="currency">Rp</span>
+                                <span class="amount">49.000</span>
+                                <span class="period">/bulan</span>
+                            </div>
+                            <ul class="pricing-features">
+                                <li>✓ Akses semua artikel premium</li>
+                                <li>✓ Tanpa iklan</li>
+                                <li>✓ Newsletter eksklusif</li>
+                                <li>✓ Akses arsip berita</li>
+                            </ul>
+                            <button class="btn-select">Pilih Paket</button>
+                        </div>
+
+                        <div class="pricing-card pricing-card-recommended" data-plan="yearly">
+                            <div class="badge-recommended">HEMAT 30%</div>
+                            <div class="pricing-header">
+                                <h3>Tahunan</h3>
+                            </div>
+                            <div class="pricing-price">
+                                <span class="currency">Rp</span>
+                                <span class="amount">410.000</span>
+                                <span class="period">/tahun</span>
+                            </div>
+                            <div class="price-comparison">
+                                <span class="original-price">Rp 588.000</span>
+                                <span class="savings">Hemat Rp 178.000</span>
+                            </div>
+                            <ul class="pricing-features">
+                                <li>✓ Akses semua artikel premium</li>
+                                <li>✓ Tanpa iklan</li>
+                                <li>✓ Newsletter eksklusif</li>
+                                <li>✓ Akses arsip berita</li>
+                                <li>✓ <strong>2 bulan gratis</strong></li>
+                            </ul>
+                            <button class="btn-select btn-select-recommended">Pilih Paket</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Metode Pembayaran -->
+                <section class="subscription-section payment-section" style="display: none;">
+                    <h2>Metode Pembayaran</h2>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method" data-method="bank">
+                            <input type="radio" name="payment" id="bank" value="bank">
+                            <label for="bank">
+                                <div class="payment-icon">🏦</div>
+                                <div class="payment-info">
+                                    <h4>Transfer Bank</h4>
+                                    <p>BCA, Mandiri, BNI, BRI</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="payment-method" data-method="ewallet">
+                            <input type="radio" name="payment" id="ewallet" value="ewallet">
+                            <label for="ewallet">
+                                <div class="payment-icon">📱</div>
+                                <div class="payment-info">
+                                    <h4>E-Wallet</h4>
+                                    <p>GoPay, OVO, DANA, ShopeePay</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="payment-method" data-method="credit">
+                            <input type="radio" name="payment" id="credit" value="credit">
+                            <label for="credit">
+                                <div class="payment-icon">💳</div>
+                                <div class="payment-info">
+                                    <h4>Kartu Kredit/Debit</h4>
+                                    <p>Visa, Mastercard, JCB</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="payment-method" data-method="qris">
+                            <input type="radio" name="payment" id="qris" value="qris">
+                            <label for="qris">
+                                <div class="payment-icon">📲</div>
+                                <div class="payment-info">
+                                    <h4>QRIS</h4>
+                                    <p>Scan & Pay</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Detail Checkout -->
+                <aside class="checkout-summary">
+                    <h3>Ringkasan Pesanan</h3>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Paket</span>
+                        <span class="summary-value" id="summary-plan">-</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Periode</span>
+                        <span class="summary-value" id="summary-period">-</span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span class="summary-label">Metode Pembayaran</span>
+                        <span class="summary-value" id="summary-payment">-</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-item">
+                        <span class="summary-label">Subtotal</span>
+                        <span class="summary-value" id="summary-subtotal">Rp 0</span>
+                    </div>
+
+                    <div class="summary-item discount-item" style="display: none;">
+                        <span class="summary-label">Diskon</span>
+                        <span class="summary-value summary-discount" id="summary-discount">- Rp 0</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-total">
+                        <span class="total-label">Total</span>
+                        <span class="total-value" id="summary-total">Rp 0</span>
+                    </div>
+
+                    <button class="btn-checkout" id="btn-checkout" disabled>
+                        Pilih Paket & Metode Pembayaran
+                    </button>
+
+                    <p class="checkout-note">
+                        Dengan melanjutkan, Anda menyetujui <a href="#">Syarat & Ketentuan</a> kami
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="../javascript/subscription.js"></script>
+</body>
+</html>
