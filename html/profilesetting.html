@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <!-- Head (Mulai) -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Settings — FE-NEWS</title>
+  <link rel="stylesheet" href="../css/profilesetting.css" />
+  <!-- Head (Selesai) -->
+</head>
+<body>
+  <!-- Header (Mulai) -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">FE</div>
+      <strong>FE-NEWS</strong>
+    </div>
+    <nav class="nav">
+      <a href="./index.html">Home</a>
+      <a href="./profile.html">Profile</a>
+      <a href="./profilesetting.html" aria-current="page">Settings</a>
+      <a href="./login.html">Login</a>
+    </nav>
+  </header>
+  <!-- Header (Selesai) -->
+  <div></div>
+  <!--Edit Akun (Mulai) -->
+  <section id="edit" class="screen">
+    <main class="container">
+      <!-- Form (Mulai) -->
+      <section class="card edit">
+        <h2>Edit akun</h2>
+        <form id="accountForm" novalidate>
+
+        <div id="errors" role="alert" aria-live="polite"></div>
+          <div class="grid two">
+            <div class="field">
+              <label for="display">Username</label>
+              <input id="display" type="text" required value="Venus" />
+              <small class="error" data-for="display"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" value="venus.mars@femail.com" readonly />
+              <small class="hint">Ubah email dari pusat akun.</small>
+            </div>
+          </div>
+
+          <div class="grid two">
+            <div class="field">
+              <label for="first">Nama depan</label>
+              <input id="first" type="text" value="Venus" />
+            </div>
+            <div class="field">
+              <label for="last">Nama belakang</label>
+              <input id="last" type="text" value="Mars" />
+            </div>
+          </div>
+
+          <div class="grid two">
+            <div class="field">
+              <label for="phone">Telepon</label>
+              <input id="phone" type="tel" placeholder="+62 3456 7890 000" />
+              <small class="error" data-for="phone"></small>
+            </div>
+            <div class="field toggle">
+              <label for="newsletter">Newsletter</label>
+              <label class="switch">
+                <input id="newsletter" type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid two">
+            <div class="field toggle">
+              <label for="notif">Notifikasi komentar</label>
+              <label class="switch">
+                <input id="notif" type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <details class="fieldset">
+            <summary>Ganti password (opsional)</summary>
+            <div class="grid two">
+              <div class="field">
+                <label for="pass">Password baru</label>
+                <input id="pass" type="password" minlength="8" placeholder="••••••••" />
+                <small class="hint">Minimal 8 karakter.</small>
+                <small class="error" data-for="pass"></small>
+              </div>
+              <div class="field">
+                <label for="pass2">Ulangi password</label>
+                <input id="pass2" type="password" placeholder="Ulangi" />
+                <small class="error" data-for="pass2"></small>
+              </div>
+            </div>
+          </details>
+
+          <div class="actions">
+            <button class="btn primary" type="submit">Simpan</button>
+            <a class="btn" href="profile.html">Kembali</a>
+          </div>
+
+          <div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+        </form>
+      </section>
+      <!-- Form (Selesai) -->
+    </main>
+  </section>
+  <!-- Layar 2: Edit Akun (Selesai) -->
+
+  <!-- Script (Mulai) -->
+  <script src="../javascript/profilesetting.js"></script>
+  <!-- Script (Selesai) -->
+</body>
+</html>
