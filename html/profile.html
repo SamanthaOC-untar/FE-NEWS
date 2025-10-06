@@ -24,35 +24,101 @@
   </header>
   <!-- Header (Selesai) -->
 
-  <!-- Container (Mulai) -->
-  <main class="container">
-    <!-- Profile Card (Mulai) -->
-    <section class="profile-card">
-      <div class="avatar-wrap">
-        <img src="" alt="Foto profil" id="avatarPreview" />
-      </div>
-      <h1 class="title">Venus Mars</h1>
-      <p class="role">Pembaca FE-NEWS</p>
-      <div class="meta">
-        <span class="chip">Jakarta, Indonesia</span>
-        <span class="dot" aria-hidden="true">•</span>
-        <span class="chip">Newsletter aktif</span>
-      </div>
-      <hr class="divider" />
+  <!-- Layar: Informasi (Mulai) -->
+  <section class="screen">
+    <main class="container">
+      <!-- Kartu Profil (Mulai) -->
+      <article class="profile-card">
+        <!-- Cover (Mulai) -->
+        <div class="cover">
+          <div class="avatar">
+            <img id="avatarPreview" alt="Foto profil" />
+          </div>
+        </div>
+        <!-- Cover (Selesai) -->
 
-      <div class="tags">
-        <span class="tag">Teknologi</span>
-        <span class="tag">Ekonomi</span>
-      </div>
-      <a class="btn primary" href="./profilesetting.html">Edit profile</a>
-    </section>
-    <!-- Profile Card (Selesai) -->
-  </main>
-  <!-- Container (Selesai) -->
+        <!-- Identitas (Mulai) -->
+        <div class="identity">
+          <div class="name-meta">
+            <h1 class="title" id="vName">Venus Mars</h1>
+            <p class="role">Pembaca FE-NEWS</p>
+            <div class="chips">
+              <span id="vLocation" class="chip">Jakarta, Indonesia</span>
+              <span class="dot">•</span>
+              <span id="vNews" class="chip good">Newsletter aktif</span>
+            </div>
+          </div>
+          <a class="btn ghost" href="./profilesetting.html">Edit profile</a>
+        </div>
+        <!-- Identitas (Selesai) -->
 
-  <!-- Footer (Mulai) -->
-  <footer class="site-footer">© 2025 FE-NEWS</footer>
-  <!-- Footer (Selesai) -->
+        <!-- Body (Mulai) -->
+        <div class="body">
+          <div class="left">
+            <!-- Detail singkat (Mulai) -->
+            <ul class="list">
+              <li>
+                <span class="label">Email</span>
+                <span class="value" id="vEmail">venus.mars@femail.com</span>
+              </li>
+              <li>
+                <span class="label">Minat</span>
+                <span class="value" id="vInterests">Teknologi • Ekonomi</span>
+              </li>
+              <li>
+                <span class="label">Bergabung</span>
+                <span class="value">Jan 2025</span>
+              </li>
+            </ul>
+            <!-- Detail singkat (Selesai) -->
+          </div>
 
+          <div class="right">
+            <!-- Statistik (Mulai) -->
+            <div class="stats">
+              <div>
+                <div class="num" id="vSaved">18</div>
+                <div class="lbl">Artikel tersimpan</div>
+              </div>
+              <div>
+                <div class="num" id="vTopics">3</div>
+                <div class="lbl">Topik dipilih</div>
+              </div>
+              <div>
+                <div class="num">97%</div>
+                <div class="lbl">Profil lengkap</div>
+              </div>
+            </div>
+            <!-- Statistik (Selesai) -->
+          </div>
+        </div>
+        <!-- Body (Selesai) -->
+
+        <!-- Tags (Mulai) -->
+        <div class="tags">
+          <span class="tag">Teknologi</span>
+          <span class="tag">Ekonomi</span>
+          <span class="tag">Kebijakan Publik</span>
+        </div>
+        <!-- Tags (Selesai) -->
+      </article>
+      <!-- Kartu Profil (Selesai) -->
+    </main>
+  </section>
+  <!-- Layar: Informasi (Selesai) -->
+
+  <!-- Script Ringan (Mulai) -->
+  <script>
+    // Avatar placeholder SVG
+    const svg = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+        <rect width="100%" height="100%" fill="#111418"/>
+        <circle cx="80" cy="65" r="34" fill="#2a313e"/>
+        <rect x="40" y="110" width="80" height="22" rx="11" fill="#2a313e"/>
+      </svg>`
+    );
+    document.getElementById('avatarPreview').src = svg;
+  </script>
+  <!-- Script Ringan (Selesai) -->
 </body>
 </html>
