@@ -18,7 +18,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: Arial, sans-serif;
+    font: 400 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial;
     background: var(--paper-100);              
     color: var(--ink-900);
     line-height: 1.6;
