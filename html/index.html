@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME - FENEWS</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header></header>
+    <header class="site-header">
+    <div class="brand">
+      <div class="logo">FE</div>
+      <strong>FE-NEWS</strong>
+    </div>
+    <form id="headerSearchForm" class="header-search">
+        <input 
+        type="search" 
+        id="headerSearchInput" 
+        placeholder="Cari berita..."
+        aria-label="Cari berita"
+        >
+        <button type="submit" aria-label="Search">
+        <i class="fas fa-search"></i>
+        </button>
+    </form>
+    <nav class="nav">
+      <a href="./index.html" aria-current="page">Home</a>
+      <a href="./profile.html" >Profile</a>
+      <a href="./profilesetting.html">Settings</a>
+      <a href="./login.html">Login</a>
+    </nav>
+  </header>
 
     <main class="main-content">
         <div class="home-container">
@@ -17,39 +40,30 @@
 
                     <article class="featured-main">
                         <div class="featured-image">
-                            [Gambar] 
-                            <!-- Diganti dengan gambar berita yang dipake -->
+                            <img src="../Pictures/index/index1.jpeg">
                         </div>
                         <div class="featured-content">
                             <h1 class="featured-title">
-                                (Title)
+                                Purbaya Tegaskan Kebijakan Donasi Rp1.000 KDM Bukan Arahan dari Pusat
                             </h1>
-                            <p class="featured-excerpt">
-                                Lorem ipsum dolor sit amet
-                            </p>
                             <div class="article-meta">
-                                <span class="category-tag">(Kategori)</span>
-                                <span>(Waktu)</span>
+                                <span class="category-tag">Ekonomi</span>
                             </div>
                         </div>
                     </article>
                     
                     <div class="secondary-news">
                         <article class="news-item">
-                            <h3>(title)</h3>
-                            <p class="news-excerpt">lorem ipsum dolor sit amet</p>
+                            <h3>Temukan Penangkal Autoimun, 3 Ilmuwan Dapat Hadiah Nobel Kedokteran</h3>
                             <div class="article-meta">
-                                <span class="category-tag">(Kategori)</span>
-                                <span>(waktu)</span>
+                                <span class="category-tag">Teknologi</span>
                             </div>
                         </article>
 
                         <article class="news-item">
-                            <h3>(title)</h3>
-                            <p class="news-excerpt">lorem ipsum dolor sit amet</p>
+                            <h3>KPK Ungkap Sumber Uang Rp100 Miliar di Kasus Kuota Haji</h3>
                             <div class="article-meta">
-                                <span class="category-tag">(Kategori)</span>
-                                <span>(waktu)</span>
+                                <span class="category-tag">Hukum</span>
                             </div>
                         </article>
                     </div>
@@ -62,9 +76,9 @@
                             <div class="trending-item">
                                 <div class="trending-number">1</div>
                                 <div class="trending-content">
-                                    <h4>title</h4>
+                                    <h4>Purbaya Komentari Kebijakan KDM Minta Donasi Rp1.000 dari Warga Jabar</h4>
                                     <div class="article-meta">
-                                        <span>waktu</span>
+                                        <span class="category-tag">Ekonomi</span>
                                     </div>
                                 </div>
                             </div>
@@ -72,9 +86,9 @@
                             <div class="trending-item">
                                 <div class="trending-number">2</div>
                                 <div class="trending-content">
-                                    <h4>title</h4>
+                                    <h4>FIFA: Bukan FAM dan 7 Naturalisasi Malaysia yang Memalsukan Dokumen</h4>
                                     <div class="article-meta">
-                                        <span>waktu</span>
+                                        <span class="category-tag">Olahraga</span>
                                     </div>
                                 </div>
                             </div>
@@ -82,9 +96,9 @@
                             <div class="trending-item">
                                 <div class="trending-number">3</div>
                                 <div class="trending-content">
-                                    <h4>title</h4>
+                                    <h4>Sekolah Internasional Tangsel Dapat Ancaman Bom, Jihandak Diturunkan</h4>
                                     <div class="article-meta">
-                                        <span>waktu</span>
+                                        <span class="category-tag">Nasional</span>
                                     </div>
                                 </div>
                             </div>
@@ -92,9 +106,9 @@
                             <div class="trending-item">
                                 <div class="trending-number">4</div>
                                 <div class="trending-content">
-                                    <h4>title</h4>
+                                    <h4>Tanggul di Sunda Kelapa Jakarta Jebol, Lalu Lintas Macet</h4>
                                     <div class="article-meta">
-                                        <span>waktu</span>
+                                        <span class="category-tag">Nasional</span>
                                     </div>
                                 </div>
                             </div>
@@ -102,9 +116,9 @@
                             <div class="trending-item">
                                 <div class="trending-number">5</div>
                                 <div class="trending-content">
-                                    <h4>title</h4>
+                                    <h4>VIDEO: Ilmuwan Jepang Raih Hadiah Nobel Kedokteran 2025</h4>
                                     <div class="article-meta">
-                                        <span>waktu</span>
+                                        <span class="category-tag">Teknologi</span>
                                     </div>
                                 </div>
                             </div>
@@ -114,54 +128,39 @@
             </div>
 
             <section class="category-section">
-                <h2>Berita (Kategori)</h2>
+                <h2>Berita Teknologi</h2>
                 <div class="category-grid">
                     <article class="category-item">
                         <div class="category-image">
-                            (Gambar)
+                            <img src="../Pictures/index/index2.jpeg">
                         </div>
                         <div class="category-item-content">
-                            <h3>title</h3>
-                            <p class="category-excerpt">desc</p>
-                            <div class="article-meta">
-                                <span class="category-tag">(kategori)</span>
-                                <span>waktu</span>
-                            </div>
+                            <h3>Logitech Rilis Mouse Flagship MX Master 4, Harga Tembus Rp2 Jutaan</h3>
                         </div>
                     </article>
 
                     <article class="category-item">
                         <div class="category-image">
-                            (Gambar)
+                            <img src="../Pictures/index/index3.jpeg">
                         </div>
                         <div class="category-item-content">
-                            <h3>title</h3>
-                            <p class="category-excerpt">desc</p>
-                            <div class="article-meta">
-                                <span class="category-tag">(kategori)</span>
-                                <span>waktu</span>
-                            </div>
+                            <h3>Daftar 5 Hujan Meteor yang Aktif Bulan Oktober Ini</h3>
                         </div>
                     </article>
 
                     <article class="category-item">
                         <div class="category-image">
-                            (Gambar)
+                            <img src="../Pictures/index/index4.jpeg">
                         </div>
                         <div class="category-item-content">
-                            <h3>title</h3>
-                            <p class="category-excerpt">desc</p>
-                            <div class="article-meta">
-                                <span class="category-tag">(kategori)</span>
-                                <span>waktu</span>
-                            </div>
+                            <h3>Hp Tiba-tiba Tidak Bisa Isi Daya? Begini Cara Mengatasinya</h3>
                         </div>
                     </article>
                 </div>
             </section>
 
             <section class="category-section">
-                <h2>Berita (Kategori)</h2>
+                <h2>Berita Olahraga</h2>
                 <div class="category-grid">
                     <article class="category-item">
                         <div class="category-image">
@@ -169,11 +168,6 @@
                         </div>
                         <div class="category-item-content">
                             <h3>title</h3>
-                            <p class="category-excerpt">desc</p>
-                            <div class="article-meta">
-                                <span class="category-tag">(kategori)</span>
-                                <span>waktu</span>
-                            </div>
                         </div>
                     </article>
 
@@ -183,11 +177,6 @@
                         </div>
                         <div class="category-item-content">
                             <h3>title</h3>
-                            <p class="category-excerpt">desc</p>
-                            <div class="article-meta">
-                                <span class="category-tag">(kategori)</span>
-                                <span>waktu</span>
-                            </div>
                         </div>
                     </article>
 
@@ -197,11 +186,6 @@
                         </div>
                         <div class="category-item-content">
                             <h3>title</h3>
-                            <p class="category-excerpt">desc</p>
-                            <div class="article-meta">
-                                <span class="category-tag">(kategori)</span>
-                                <span>waktu</span>
-                            </div>
                         </div>
                     </article>
                 </div>
@@ -212,98 +196,84 @@
                 <div class="latest-news-list">
                     <article class="latest-news-item">
                         <div class="latest-news-image">
-                            gambar
+                            <img src="../Pictures/index/index5.jpeg">
                         </div>
                         <div class="latest-news-content">
-                            <h3>Title</h3>
-                            <p class="latest-news-excerpt">desc</p>
+                            <h3>Basarnas Resmi Tutup Operasi Pencarian Korban Amburk Ponpes Al Khoziny</h3>
                             <div class="article-meta">
-                                <span class="category-tag">kategori</span>
-                                <span>waktu</span>
+                                <span class="category-tag">Nasional</span>
                             </div>
                         </div>
                     </article>
 
                     <article class="latest-news-item">
                         <div class="latest-news-image">
-                            gambar
+                            <img src="../Pictures/index/index6.jpeg">
                         </div>
                         <div class="latest-news-content">
-                            <h3>Title</h3>
-                            <p class="latest-news-excerpt">desc</p>
+                            <h3>Purbaya Komentari Kebijakan KDM Minta Donasi Rp1.000 dari Warga Jabar</h3>
                             <div class="article-meta">
-                                <span class="category-tag">kategori</span>
-                                <span>waktu</span>
+                                <span class="category-tag">Ekonomi</span>
                             </div>
                         </div>
                     </article>
 
                     <article class="latest-news-item">
                         <div class="latest-news-image">
-                            gambar
+                            <img src="../Pictures/index/index7.jpeg">
                         </div>
                         <div class="latest-news-content">
-                            <h3>Title</h3>
-                            <p class="latest-news-excerpt">desc</p>
+                            <h3>VIDEO: Kisah Wanita Jerman Jadi Pelukis Sepatu yang Dilirik Toni Kroos</h3>
                             <div class="article-meta">
-                                <span class="category-tag">kategori</span>
-                                <span>waktu</span>
+                                <span class="category-tag">Gaya Hidup</span>
                             </div>
                         </div>
                     </article>
 
                     <article class="latest-news-item">
                         <div class="latest-news-image">
-                            gambar
+                            <img src="../Pictures/index/index8.jpeg">
                         </div>
                         <div class="latest-news-content">
-                            <h3>Title</h3>
-                            <p class="latest-news-excerpt">desc</p>
+                            <h3>FIFA: Bukan FAM dan 7 Naturalisasi Malaysia yang Memalsukan Dokumen</h3>
                             <div class="article-meta">
-                                <span class="category-tag">kategori</span>
-                                <span>waktu</span>
+                                <span class="category-tag">Olahraga</span>
                             </div>
                         </div>
                     </article>
 
                     <article class="latest-news-item">
                         <div class="latest-news-image">
-                            gambar
+                            <img src="../Pictures/index/index9.jpeg">
                         </div>
                         <div class="latest-news-content">
-                            <h3>Title</h3>
-                            <p class="latest-news-excerpt">desc</p>
+                            <h3>Sherly Tjoanda-17 Gubernur Protes Purbaya Soal Pemotongan Duit Pemda</h3>
                             <div class="article-meta">
-                                <span class="category-tag">kategori</span>
-                                <span>waktu</span>
+                                <span class="category-tag">Ekonomi</span>
                             </div>
                         </div>
                     </article>
 
                     <article class="latest-news-item">
                         <div class="latest-news-image">
-                            gambar
+                            <img src="../Pictures/index/index10.jpeg">
                         </div>
                         <div class="latest-news-content">
-                            <h3>Title</h3>
-                            <p class="latest-news-excerpt">desc</p>
+                            <h3>8 Kebiasaan Ini Jadi Penyebab Berat Badan Susah Turun Meski Sudah Diet</h3>
                             <div class="article-meta">
-                                <span class="category-tag">kategori</span>
-                                <span>waktu</span>
+                                <span class="category-tag">Gaya Hidup</span>
                             </div>
                         </div>
                     </article>
 
                     <article class="latest-news-item">
                         <div class="latest-news-image">
-                            gambar
+                            <img src="../Pictures/index/index11.jpeg">
                         </div>
                         <div class="latest-news-content">
-                            <h3>Title</h3>
-                            <p class="latest-news-excerpt">desc</p>
+                            <h3>Hakim di Albania Tewas Ditembak saat Pimpin Sidang</h3>
                             <div class="article-meta">
-                                <span class="category-tag">kategori</span>
-                                <span>waktu</span>
+                                <span class="category-tag">Internasional</span>
                             </div>
                         </div>
                     </article>
@@ -313,13 +283,45 @@
         </div>
     </main>
     
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-kolom about-us">
+                <h1 class="footer-logo-text">FENews</h1>
+                <p class="footer-description">
+                    FENews adalah sumber terpercaya untuk berita yang independen, akurat, dan mendalam.
+                    Kami berkomitmen untuk jurnalisme berkualitas tinggi dan integritas.
+                </p>
+                <p class="copyright">&copy; 2025 FENews. All Rights Reserved.</p>
+            </div>
+    
+            <div class="footer-kolom navigasi">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Berita Terbaru</a></li>
+                    <li><a href="#">Liputan Khusus</a></li>
+                    <li><a href="#">Galeri Foto</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-kolom kontak-legal">
+                <h3>Informasi</h3>
+                <p><strong>Alamat Redaksi:</strong><br>
+                    Jl.   Letjen S. Parman St No.1, RT.6/RW.16, <br>
+                    Tomang, Grogol petamburan, West Jakarta City, Jakarta 11440
+                </p>
+                <p><strong>Email:</strong><br>
+                    redaksi@fenews.co.id
+                </p>
+                <p class="legal-links">
+                    <a href="#">Kebijakan Privasi</a> |
+                    <a href="#">Syarat & Ketentuan</a>
+                </p>
+            </div>
+        </div>
+    </footer>
 
-
-
-
-
-    <footer></footer>
-
-    <script src = "../javascript/index.js"></script>
+    <script src = "../javascript/header.js"></script>
 </body>
 </html>
