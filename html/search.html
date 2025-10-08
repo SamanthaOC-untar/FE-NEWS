@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - FENEWS</title>
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="brand">
+      <div class="logo">FE</div>
+      <strong>FE-NEWS</strong>
+    </div>
+    <form id="headerSearchForm" class="header-search">
+        <input 
+        type="search" 
+        id="headerSearchInput" 
+        placeholder="Cari berita..."
+        aria-label="Cari berita"
+        >
+        <button type="submit" aria-label="Search">
+        <i class="fas fa-search"></i>
+        </button>
+    </form>
+    <nav class="nav">
+      <a href="./index.html">Home</a>
+      <a href="./profile.html" >Profile</a>
+      <a href="./profilesetting.html">Settings</a>
+      <a href="./login.html">Login</a>
+    </nav>
+  </header>
+
+
+    <main class="main-content">
+        <div class="search-container">
+            <!-- Search Box Section -->
+            <section class="search-box-section">
+                <div class="search-box-wrapper">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Cari berita berdasarkan judul..."
+                    >
+                    <button id="searchButton" class="search-button">
+                        <i class="fas fa-search"></i> Cari
+                    </button>
+                </div>
+            </section>
+
+            <!-- Search Info Section -->
+            <section class="search-info-section">
+                <div id="searchInfo" class="search-info"></div>
+            </section>
+
+            <!-- Filter Section -->
+            <section class="filter-section">
+                <div class="filter-wrapper">
+                    <h3><i class="fas fa-filter"></i> Filter</h3>
+                    <div class="filter-options">
+                        <div class="filter-group">
+                            <label for="categoryFilter">Kategori:</label>
+                            <select id="categoryFilter" class="filter-select">
+                                <option value="semua">Semua Kategori</option>
+                                <option value="Politik">Politik</option>
+                                <option value="Ekonomi">Ekonomi</option>
+                                <option value="Teknologi">Teknologi</option>
+                                <option value="Olahraga">Olahraga</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Event">Event</option>
+                                <option value="Bisnis">Bisnis</option>
+                                <option value="Lingkungan">Lingkungan</option>
+                                <option value="Internasional">Internasional</option>
+                                <option value="Hukum">Hukum</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="dateFilter">Tanggal:</label>
+                            <select id="dateFilter" class="filter-select">
+                                <option value="kapan-saja">Kapan Saja</option>
+                                <option value="24-jam">24 Jam Terakhir</option>
+                                <option value="minggu-ini">Minggu Ini</option>
+                                <option value="bulan-ini">Bulan Ini</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <div id="resultsContainer" class="results-container">
+                </div>
+
+                <!-- Pagination -->
+                <div id="paginationContainer" class="pagination-container">
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-kolom about-us">
+                <h1 class="footer-logo-text">FENews</h1>
+                <p class="footer-description">
+                    FENews adalah sumber terpercaya untuk berita yang independen, akurat, dan mendalam.
+                    Kami berkomitmen untuk jurnalisme berkualitas tinggi dan integritas.
+                </p>
+                <p class="copyright">&copy; 2025 FENews. All Rights Reserved.</p>
+            </div>
+    
+            <div class="footer-kolom navigasi">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#">Berita Terbaru</a></li>
+                    <li><a href="#">Liputan Khusus</a></li>
+                    <li><a href="#">Galeri Foto</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-kolom kontak-legal">
+                <h3>Informasi</h3>
+                <p><strong>Alamat Redaksi:</strong><br>
+                    Jl. Letjen S. Parman St No.1, RT.6/RW.16, <br>
+                    Tomang, Grogol petamburan, West Jakarta City, Jakarta 11440
+                </p>
+                <p><strong>Email:</strong><br>
+                    redaksi@fenews.co.id
+                </p>
+                <p class="legal-links">
+                    <a href="#">Kebijakan Privasi</a> |
+                    <a href="#">Syarat & Ketentuan</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/newsDatabase.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/header.js"></script>
+</body>
+</html>
