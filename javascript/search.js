@@ -2,7 +2,7 @@
 class NewsSearch {
     constructor() {
         this.currentPage = 1;
-        this.itemsPerPage = 10;
+        this.itemsPerPage = 5;
         this.currentCategory = 'semua';
         this.currentDateFilter = 'kapan-saja';
         this.searchQuery = '';
@@ -208,6 +208,7 @@ class NewsSearch {
     createNewsItem(news) {
         return `
             <article class="news-result-item">
+                <a href="${news.link}" style="text-decoration: none; color: inherit;">
                 <div class="news-result-image">
                     <img src="${news.image}" alt="${news.title}">
                 </div>
@@ -215,9 +216,10 @@ class NewsSearch {
                     <h3>${news.title}</h3>
                     <div class="article-meta">
                         <span class="category-tag">${news.category}</span>
-                        <span><i class="far fa-clock"></i> ${news.time}</span>
+                        <span class="time-tag"><i class="far fa-clock"></i> ${news.time}</span>
                     </div>
                 </div>
+                </a>
             </article>
         `;
     }

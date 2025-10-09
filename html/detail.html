@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel - FENEWS</title>
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">
+                    <span>FE</span> FE - NEWS
+                </a>
+            </div>
+            <form id="headerSearchForm" class="header-search">
+                <input 
+                type="search" 
+                id="headerSearchInput" 
+                placeholder="Cari berita..."
+                aria-label="Cari berita"
+                >
+                <button type="submit" aria-label="Search">
+                <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <nav class="top-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="subscription.html">Subscription</a>
+                <a href="profile.html">Profile</a>
+                <a href="profilesetting.html">Settings</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="techno.html">Tekno</a></li>
+                <li><a href="kategori-olahraga.html">Olahraga</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Politik</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="article-detail">
+        <div class="article-container">
+            <div id="loading" class="loading-state">
+                <p>Memuat artikel...</p>
+            </div>
+
+            <div id="error" class="error-state" style="display: none;">
+                <p>Artikel tidak ditemukan</p>
+                <a href="./index.html" class="btn-back">Kembali ke Beranda</a>
+            </div>
+
+            <div id="article-content" style="display: none;">
+                <header class="article-header">
+                    <h1 class="article-headline" id="headline"></h1>
+                    
+                    <div class="article-info">
+                        <span class="category-tag" id="category"></span>
+                        <span class="article-timestamp">
+                            <i class="far fa-clock"></i> <span id="timestamp"></span>
+                        </span>
+                    </div>
+                </header>
+
+                <div class="article-featured">
+                    <img id="article-image" src="" alt="Article Image" class="article-image">
+                    <div class="article-excerpt">
+                        <p id="excerpt"></p>
+                    </div>
+                </div>
+
+                <article class="article-content" id="content">
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-kolom about-us">
+                <h1 class="footer-logo-text">FENews</h1>
+                <p class="footer-description">
+                    FENews adalah sumber terpercaya untuk berita yang independen, akurat, dan mendalam.
+                    Kami berkomitmen untuk jurnalisme berkualitas tinggi dan integritas.
+                </p>
+                <p class="copyright">&copy; 2025 FENews. All Rights Reserved.</p>
+            </div>
+    
+            <div class="footer-kolom navigasi">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Berita Terbaru</a></li>
+                    <li><a href="#">Liputan Khusus</a></li>
+                    <li><a href="#">Galeri Foto</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-kolom kontak-legal">
+                <h3>Informasi</h3>
+                <p><strong>Alamat Redaksi:</strong><br>
+                    Jl.   Letjen S. Parman St No.1, RT.6/RW.16, <br>
+                    Tomang, Grogol petamburan, West Jakarta City, Jakarta 11440
+                </p>
+                <p><strong>Email:</strong><br>
+                    redaksi@fenews.co.id
+                </p>
+                <p class="legal-links">
+                    <a href="#">Kebijakan Privasi</a> |
+                    <a href="#">Syarat & Ketentuan</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../javascript/articles-data.js"></script>
+    <script src="../javascript/article-detail.js"></script>
+</body>
+</html>

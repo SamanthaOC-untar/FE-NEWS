@@ -4,24 +4,49 @@
   <!-- Head (Mulai) -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Profil — FE-NEWS</title>
+  <title>Profil — FENEWS</title>
   <link rel="stylesheet" href="../css/profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Head (Selesai) -->
 </head>
 <body>
   <!-- Header (Mulai) -->
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo">FE</div>
-      <strong>FE-NEWS</strong>
-    </div>
-    <nav class="nav">
-      <a href="./index.html">Home</a>
-      <a href="./profile.html" aria-current="page">Profile</a>
-      <a href="./profilesetting.html">Settings</a>
-      <a href="./login.html">Login</a>
-    </nav>
-  </header>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">
+                    <span>FE</span> FE - NEWS
+                </a>
+            </div>
+            <form id="headerSearchForm" class="header-search">
+                <input 
+                type="search" 
+                id="headerSearchInput" 
+                placeholder="Cari berita..."
+                aria-label="Cari berita"
+                >
+                <button type="submit" aria-label="Search">
+                <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="subscription.html">Subscription</a>
+                <a href="profile.html" class="active">Profile</a>
+                <a href="profilesetting.html">Settings</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="techno.html">Tekno</a></li>
+                <li><a href="kategori-olahraga.html">Olahraga</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Politik</a></li>
+            </ul>
+        </nav>
+    </header>
   <!-- Header (Selesai) -->
 
   <!-- Layar: Informasi (Mulai) -->

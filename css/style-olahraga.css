@@ -1,3 +1,19 @@
+:root {
+    --red-600: #C81E1E;
+    --red-800: #991B1B;
+
+    --ink-700: #1A1B1E;
+    --ink-300: #4A4F57;
+
+    --paper-50:  #FFFFFF;
+
+    --primary-text-color: #212121;
+    --secondary-text-color: #666666;
+    --border-color: #eeeeee;
+    --accent-color: #cc0000;
+    --active-nav-bg: #f0f0f0;
+}
+
 /* Reset & Base Styles */
 * {
     margin: 0;
@@ -6,102 +22,126 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
+    font: 400 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: var(--paper-50);              
+    color: var(--ink-300);
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header Utama */
+/* Header (Mulai) */
 .main-header {
-    background-color: #ffffff;
-    padding: 10px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e0e0e0;
+    background-color: var(--paper-50);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-
-.logo {
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    border-bottom: 1px solid var(--border-color);
+}
+.logo a {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
     text-decoration: none;
-}
-
-.logo-box {
-    background-color: #d90429;
-    color: #fff;
-    padding: 6px 12px;
+    font-size: 1.5rem;
     font-weight: 700;
+    color: var(--primary-text-color);
+}
+.logo span {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+/* HEADER SEARCH */
+.header-search {
+  display: flex;
+  flex: 0 1 400px;
+  background: var(--paper-50);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.header-search input {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--ink-700);
+}
+
+.header-search input::placeholder {
+  color: var(--ink-300);
+}
+
+.header-search button {
+  padding: 10px 20px;
+  background: var(--red-600);
+  color: var(--paper-50);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.header-search button:hover {
+  background: var(--red-800);
+}
+.top-nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 }
-
-.main-nav a {
-    font-size: 16px;
+.top-nav a {
+    text-decoration: none;
+    color: var(--primary-text-color);
     font-weight: 500;
-    color: #555;
-    transition: color 0.3s;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+.top-nav a.active, .top-nav a:hover {
+    background-color: var(--active-nav-bg);
     text-decoration: none;
 }
-
-.main-nav a:hover {
-    color: #000;
-}
-
-.main-nav a.profile-btn {
-    background-color: #f0f0f0;
-    padding: 8px 20px;
-    border-radius: 20px;
-    color: #333;
-    font-weight: 600;
-}
-
-.main-nav a.profile-btn:hover {
-    background-color: #e0e0e0;
-}
-
-/* Secondary Navigation */
-.secondary-nav {
-    background-color: #fff;
-    padding-top: 5px;
-}
-
-.secondary-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.header-nav {
+    background-color: var(--paper-50);
     display: flex;
     justify-content: center;
-    gap: 45px;
+    padding: 0 5%;
 }
-
-.secondary-nav a {
-    font-size: 16px;
-    font-weight: 600;
-    color: #666;
-    padding-bottom: 12px;
-    border-bottom: 3px solid transparent;
-    transition: color 0.3s, border-color 0.3s;
+.header-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+}
+.header-nav a {
+    display: block;
+    padding: 12px 15px;
     text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
 }
-
-.secondary-nav a.active,
-.secondary-nav a:hover {
-    color: #d90429;
-    border-bottom-color: #d90429;
+.header-nav a:hover {
+    color: var(--primary-text-color);
 }
+.header-nav a.active-category {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+/* Header (Selesai) */
 
 /* Hero Section */
 .hero-section {

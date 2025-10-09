@@ -1,6 +1,13 @@
 :root {
+    --red-600: #C81E1E;
+    --red-800: #991B1B;
+
+    --ink-700: #1A1B1E;
+    --ink-300: #4A4F57;
+
+    --paper-50:  #FFFFFF;
+
     --bg-color: #f4f4f4;
-    --surface-color: #ffffff;
     --primary-text-color: #212121;
     --secondary-text-color: #666666;
     --border-color: #eeeeee;
@@ -9,10 +16,13 @@
     --highlight-color: #ff007f;
     --footer-bg-color: #1c1c1c; 
 }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font: 400 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    line-height: 1.4;
     margin: 0;
+    padding: 0;
     background-color: var(--bg-color);
     color: var(--primary-text-color);
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
@@ -32,9 +42,9 @@ img {
     max-width: 100%;
     height: auto;
 }
-/* Header Styles */
+/* Header (Mulai) */
 .main-header {
-    background-color: var(--surface-color);
+    background-color: var(--paper-50);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 .header-top {
@@ -60,6 +70,42 @@ img {
     border-radius: 4px;
     font-weight: 500;
 }
+/* HEADER SEARCH */
+.header-search {
+  display: flex;
+  flex: 0 1 400px;
+  background: var(--paper-50);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-search input {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--ink-700);
+}
+
+.header-search input::placeholder {
+  color: var(--ink-300);
+}
+
+.header-search button {
+  padding: 10px 20px;
+  background: var(--red-600);
+  color: var(--paper-50);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.header-search button:hover {
+  background: var(--red-800);
+}
 .top-nav {
     display: flex;
     align-items: center;
@@ -78,7 +124,7 @@ img {
     text-decoration: none;
 }
 .header-nav {
-    background-color: var(--surface-color);
+    background-color: var(--paper-50);
     display: flex;
     justify-content: center;
     padding: 0 5%;
@@ -107,10 +153,11 @@ img {
     color: var(--accent-color);
     border-bottom-color: var(--accent-color);
 }
+/* Header (Selesai) */
 .container {
     max-width: 1200px; 
-    margin: 30px auto;
-    padding: 0 20px;
+    margin: auto;
+    padding: 20px;
 }
 .main-content-grid {
     display: flex;

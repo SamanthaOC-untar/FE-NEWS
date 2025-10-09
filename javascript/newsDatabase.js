@@ -6,7 +6,8 @@ const newsDatabase = [
         category: "Bisnis",
         date: "2025-10-7",
         time: "9 menit yang lalu",
-        image: "../Pictures/searchpage/gmbr1.jpg"
+        image: "../Pictures/searchpage/gmbr1.jpg",
+        link: "detail.html?id=artikel-8"
     },
     {
         id: 2,

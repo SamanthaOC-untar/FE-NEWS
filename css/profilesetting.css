@@ -4,7 +4,6 @@
   --fg-muted: #2B2E33;
 
   --card: #FFFFFF;
-  --paper-50: #FFFFFF;
 
   /* Latar: putih → merah */
   --bg: #FFFFFF;
@@ -21,6 +20,15 @@
 
   /* Tinggi header agar sticky & layout pas */
   --header-h: 60px;
+
+  --ink-700: #1A1B1E;
+  --ink-300: #4A4F57;
+
+  --primary-text-color: #212121;
+  --secondary-text-color: #666666;
+  --border-color: #eeeeee;
+  --accent-color: #cc0000;
+  --active-nav-bg: #f0f0f0;
 }
 /* Root Variables (Selesai) */
 
@@ -34,47 +42,122 @@ body {
   margin: 0;
   color: var(--fg);
   font: 400 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  line-height: 1.4;
   background: linear-gradient(180deg, var(--bg) 0%, #E11D1D 50%, var(--muted) 100%);
 }
 /* Reset & Base (Selesai) */
 
 /* Header (Mulai) */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  height: var(--header-h);
+.main-header {
+    background-color: var(--bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    border-bottom: 1px solid var(--border-color);
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-text-color);
+}
+.logo span {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+/* HEADER SEARCH */
+.header-search {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+  flex: 0 1 400px;
+  background: var(--bg);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-  /* efek kaca tipis */
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: saturate(1.1) blur(6px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+.header-search input {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--ink-700);
 }
-.brand { display: flex; align-items: center; gap: 10px; }
-.logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 800;
+
+.header-search input::placeholder {
+  color: var(--ink-300);
 }
-.nav a {
-  text-decoration: none;
-  color: var(--fg-muted);
-  margin-left: 12px;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-weight: 600;
+
+.header-search button {
+  padding: 10px 20px;
+  background: var(--muted);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-.nav a[aria-current="page"],
-.nav a:hover { background: rgba(0,0,0,.06); color: var(--fg); }
+
+.header-search button:hover {
+  background: var(--accent-hover);
+}
+.top-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.top-nav a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+.top-nav a.active, .top-nav a:hover {
+    background-color: var(--active-nav-bg);
+    text-decoration: none;
+}
+.header-nav {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+}
+.header-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+}
+.header-nav a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+}
+.header-nav a:hover {
+    color: var(--primary-text-color);
+}
+.header-nav a.active-category {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
 /* Header (Selesai) */
 
 /* Screen Wrapper (Mulai) */
@@ -129,7 +212,7 @@ body {
 /* Cards (Selesai) */
 
 /* Form (Mulai) */
-form { padding: 0 18px; }
+#accountForm { padding: 0 18px; }
 .grid.two {
   display: grid;
   grid-template-columns: 1fr 1fr;

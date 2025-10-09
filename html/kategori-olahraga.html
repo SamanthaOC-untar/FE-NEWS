@@ -3,31 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olahraga - FeNews</title>
+    <title>Olahraga - FENEWS</title>
     <link rel="stylesheet" href="/css/style-olahraga.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="main-header">
-        <a href="#" class="logo">
-            <span class="logo-box">FE</span>FE-NEWS
-        </a>
-        <nav class="main-nav">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">
+                    <span>FE</span> FE - NEWS
+                </a>
+            </div>
+            <form id="headerSearchForm" class="header-search">
+                <input 
+                type="search" 
+                id="headerSearchInput" 
+                placeholder="Cari berita..."
+                aria-label="Cari berita"
+                >
+                <button type="submit" aria-label="Search">
+                <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="subscription.html">Subscription</a>
+                <a href="profile.html">Profile</a>
+                <a href="profilesetting.html">Settings</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+        <nav class="header-nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#" class="profile-btn">Profile</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="techno.html">Tekno</a></li>
+                <li><a href="kategori-olahraga.html" class="active-category">Olahraga</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Politik</a></li>
             </ul>
         </nav>
     </header>
-
-    <nav class="secondary-nav">
-        <ul>
-            <li><a href="#">Tekno</a></li>
-            <li><a href="#" class="active">Olahraga</a></li>
-        </ul>
-    </nav>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -36,7 +53,7 @@
             <span class="hero-tag">Sepak Bola</span>
             <h1>Ousmane Dembele Memenangkan Ballon d'or 2025</h1>
             <p>Ousmane telah resmi memenangkan ballon d'or 2025 mengalahkan kedua winger Barcelona,Lamine Yamal dan Raphinha</p>
-            <a href="#" class="hero-cta">Baca Selengkapnya</a>
+            <a href="detail.html?id=artikel-9" class="hero-cta">Baca Selengkapnya</a>
         </div>
     </section>
 

@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami - FENews</title>
+    <title>Tentang Kami - FENEWS</title>
     <link rel="stylesheet" href="../css/aboutus.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header class="top-banner">
-        <div class="header-nav">
-            <a href="#" class="nav-button">
-                <i class="fas fa-home"></i> Home
-            </a>
-            <a href="#" class="nav-button">
-                <i class="fas fa-search"></i> Search
-            </a>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">
+                    <span>FE</span> FE - NEWS
+                </a>
+            </div>
+            <form id="headerSearchForm" class="header-search">
+                <input 
+                type="search" 
+                id="headerSearchInput" 
+                placeholder="Cari berita..."
+                aria-label="Cari berita"
+                >
+                <button type="submit" aria-label="Search">
+                <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html" class="active">About Us</a>
+                <a href="subscription.html">Subscription</a>
+                <a href="profile.html">Profile</a>
+                <a href="profilesetting.html">Settings</a>
+                <a href="login.html">Login</a>
+            </nav>
         </div>
-        <h1>FENews</h1>
-        <a href="#" class="fenews-plus-button">
-            FENews Plus
-        </a>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="techno.html">Tekno</a></li>
+                <li><a href="kategori-olahraga.html">Olahraga</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Politik</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>

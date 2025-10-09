@@ -8,34 +8,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header class="site-header">
-    <div class="brand">
-      <div class="logo">FE</div>
-      <strong>FE-NEWS</strong>
-    </div>
-    <form id="headerSearchForm" class="header-search">
-        <input 
-        type="search" 
-        id="headerSearchInput" 
-        placeholder="Cari berita..."
-        aria-label="Cari berita"
-        >
-        <button type="submit" aria-label="Search">
-        <i class="fas fa-search"></i>
-        </button>
-    </form>
-    <nav class="nav">
-      <a href="./index.html">Home</a>
-      <a href="./profile.html" >Profile</a>
-      <a href="./profilesetting.html">Settings</a>
-      <a href="./login.html">Login</a>
-    </nav>
-  </header>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">
+                    <span>FE</span> FE - NEWS
+                </a>
+            </div>
+            <form id="headerSearchForm" class="header-search">
+                <input 
+                type="search" 
+                id="headerSearchInput" 
+                placeholder="Cari berita..."
+                aria-label="Cari berita"
+                >
+                <button type="submit" aria-label="Search">
+                <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="subscription.html">Subscription</a>
+                <a href="profile.html">Profile</a>
+                <a href="profilesetting.html">Settings</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="techno.html">Tekno</a></li>
+                <li><a href="kategori-olahraga.html">Olahraga</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Politik</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
     <main class="main-content">
         <div class="search-container">
-            <!-- Search Box Section -->
             <section class="search-box-section">
                 <div class="search-box-wrapper">
                     <input 
@@ -50,12 +62,10 @@
                 </div>
             </section>
 
-            <!-- Search Info Section -->
             <section class="search-info-section">
                 <div id="searchInfo" class="search-info"></div>
             </section>
 
-            <!-- Filter Section -->
             <section class="filter-section">
                 <div class="filter-wrapper">
                     <h3><i class="fas fa-filter"></i> Filter</h3>
@@ -89,12 +99,10 @@
                 </div>
             </section>
 
-            <!-- Results Section -->
             <section class="results-section">
                 <div id="resultsContainer" class="results-container">
                 </div>
 
-                <!-- Pagination -->
                 <div id="paginationContainer" class="pagination-container">
                 </div>
             </section>

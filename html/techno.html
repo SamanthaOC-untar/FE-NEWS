@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Foto Teknologi - FE NEWS</title>
+    <title>Teknologi - FENEWS</title>
     <link rel="stylesheet" href="../css/techno.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
     <header class="main-header">
         <div class="header-top">
             <div class="logo">
-                <a href="#">
+                <a href="index.html">
                     <span>FE</span> FE - NEWS
                 </a>
             </div>
+            <form id="headerSearchForm" class="header-search">
+                <input 
+                type="search" 
+                id="headerSearchInput" 
+                placeholder="Cari berita..."
+                aria-label="Cari berita"
+                >
+                <button type="submit" aria-label="Search">
+                <i class="fas fa-search"></i>
+                </button>
+            </form>
             <nav class="top-nav">
-                <a href="#">Home</a>
-                <a href="#">Profile</a>
-                <a href="#">Settings</a>
-                <a href="#">Login</a>
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="subscription.html">Subscription</a>
+                <a href="profile.html">Profile</a>
+                <a href="profilesetting.html">Settings</a>
+                <a href="login.html">Login</a>
             </nav>
         </div>
         <nav class="header-nav">
             <ul>
-                <li><a href="#" class="active-category">Tekno</a></li>
-                <li><a href="#">Olahraga</a></li>
+                <li><a href="techno.html" class="active-category">Tekno</a></li>
+                <li><a href="kategori-olahraga.html">Olahraga</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Politik</a></li>
             </ul>
         </nav>
     </header>
@@ -69,7 +85,7 @@
                     <img src="../Pictures/img/OpenAi.png" alt="Berita 1">
                     <h3>Daftar 10 Perusahaan Swasta Terkaya di Dunia, OpenAI Geser SpaceX</h3>
                 </a>
-                <a href="#" class="post-item">
+                <a href="detail.html?id=artikel-10" class="post-item">
                     <img src="../Pictures/img/Apple.png" alt="Berita 2">
                     <h3>Inikah Kandidat CEO Apple Pengganti Tim Cook?</h3>
                 </a>
@@ -163,5 +179,6 @@
     </footer>
 
     <script src="../javascript/techno-script.js" defer></script>
+    <script src = "../javascript/header.js"></script>
 </body>
 </html>
