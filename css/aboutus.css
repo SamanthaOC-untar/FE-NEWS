@@ -327,26 +327,102 @@ body {
     font-size: 0.8em;
 }
 
-/* Responsif untuk layar kecil */
+/* Responsive */
+@media (max-width: 1024px) {
+    .header-top {
+        padding: 10px 3%;
+    }
+
+    .header-search {
+        flex: 0 1 300px;
+    }
+
+    .kisah {
+        padding: 30px 20px;
+        margin: 30px auto;
+    }
+
+    .kisah h2 {
+        font-size: 2rem;
+    }
+
+    .kisah-content {
+        gap: 20px;
+    }
+
+    .kisah-text {
+        flex: 1 1 50%;
+    }
+
+    .kisah-image {
+        flex: 1 1 40%;
+    }
+
+    .social-media {
+        padding: 15px;
+    }
+
+    .social-media h2 {
+        font-size: 2rem;
+    }
+
+    .social-box {
+        flex: 1 1 160px;
+    }
+}
+
 @media (max-width: 768px) {
-    .top-banner {
+    .header-top {
         flex-direction: column;
-        text-align: center;
-        padding: 20px;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    .logo a {
+        font-size: 1.3rem;
+    }
+
+    .header-search {
+        flex: 1;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .top-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .top-nav a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
     }
 
     .header-nav {
-        display: flex;
         flex-direction: row;
-        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    .header-nav ul {
+        justify-content: flex-start;
+        padding: 0 10px;
     }
 
     .header-nav a {
-        margin: 0 10px;
+        padding: 10px 12px;
+        font-size: 0.85rem;
+        margin: 0;
     }
 
-    .fenews-plus-button {
-        margin-top: 10px;
+    .kisah {
+        padding: 25px 15px;
+        margin: 20px 15px;
+    }
+
+    .kisah h2 {
+        font-size: 1.6rem;
+        text-align: center;
     }
 
     .kisah-content {
@@ -356,10 +432,27 @@ body {
 
     .kisah-image {
         order: -1;
+        flex: 1 1 100%;
+    }
+
+    .kisah-image img {
+        width: 100%;
+        max-width: 280px;
     }
 
     .kisah-text {
         flex-basis: 100%;
+        font-size: 1rem;
+    }
+
+    .social-media {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .social-media h2 {
+        font-size: 1.6rem;
+        text-align: center;
     }
 
     .social-media-container {
@@ -369,16 +462,26 @@ body {
 
     .social-box {
         flex-basis: 100%;
+        max-width: 400px;
+    }
+
+    .social-box .icon {
+        font-size: 2rem;
     }
 
     .footer-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 30px;
     }
 
     .footer-kolom {
         flex-basis: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo-text {
+        font-size: 2rem;
     }
 }
